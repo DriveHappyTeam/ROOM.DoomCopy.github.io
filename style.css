@@ -1,0 +1,58 @@
+/* Fondo general */
+body {
+    margin: 0;
+    background: #000; /* negro estilo Doom */
+    color: #0f0;      /* verde retro */
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Canvas del juego */
+  canvas {
+    display: block;
+    margin: 20px auto;
+    background: #111; /* gris oscuro para contraste */
+    border: 3px solid #0f0; /* borde verde estilo arcade */
+    box-shadow: 0 0 20px #0f0;
+  }
+  
+  /* HUD superior */
+  #hud {
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    color: #0f0;
+  }
+  
+  /* Barra de vida */
+  .health-bar {
+    width: 200px;
+    height: 20px;
+    border: 2px solid white;
+    margin: 10px auto;
+    position: relative;
+    background: #222;
+  }
+  
+  .health-fill {
+    height: 100%;
+    background: red;
+    width: 100%; /* se ajusta con JS */
+    transition: width 0.2s linear;
+  }
+  
+  /* Flecha de aviso */
+  .arrow-warning {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid yellow;
+    display: none; /* se activa con JS */
+  }
